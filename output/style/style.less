@@ -1,0 +1,146 @@
+@sans-font-family: "Roboto Slab", sans-serif;
+@serif-font-family: "Roboto", serif;
+@title-color: rgb(187, 72, 64);
+@medium-gray: rgb(70, 70, 80);
+@dark-gray: rgb(35, 35, 45);
+@dark-blue-gray: rgb(35, 35, 65);
+@light-gray: rgb(210, 210, 220);
+@xxxlight-gray: rgb(245, 245, 255);
+
+/*
+        <head>
+            <link rel="stylesheet" href="style.css" type="text/css">
+            <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Roboto" rel="stylesheet">
+        </head>
+*/
+
+body {
+    background-color: @xxxlight-gray;
+    color: @dark-gray;
+    font-family: @serif-font-family;
+    font-weight: 400;
+}
+
+h1 {
+    font-size: x-large;
+    font-weight: bold;
+    color: @title-color;
+    font-family: @sans-font-family;
+}
+div.type_argument {
+    margin-top: -0.7em;
+    font-size: x-large;
+    color: @title-color;
+    font-weight: bold;
+    font-family: @sans-font-family;
+}
+
+span.type_note {
+    font-style: italic;
+    font-size: small;
+    font-family: @serif-font-family;
+    color: @medium-gray;
+    vertical-align: super;
+}
+table {
+    margin-top: 0.7em;
+}
+
+a {
+    color: @dark-blue-gray;
+    font-weight: bold;
+    font-family: @sans-font-family;
+}
+
+.innertp-span-type-note {
+    grid-column: 2 / span 1;
+}
+
+.innertp-hx {
+    display: inline-block;
+    padding-left: 1em;
+    grid-column: 1 / span 1;
+    justify-self: start;
+    // position: relative;
+}
+
+.innertp-hx-strong {
+    .innertp-hx;
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: @sans-font-family;
+}
+
+.innertp-hx-light {
+    .innertp-hx;
+    font-size: 1em;
+    font-weight: normal;
+    font-style: italic;
+}
+
+.innertp-p {
+    grid-column: 2 / span 1;
+    justify-self: start;
+    align-self: center;
+}
+
+.div-type-paragraph {
+    display: grid;
+    grid-template-columns: 5em auto;
+}
+
+.innertp-div-type-paragraph {
+    .div-type-paragraph;
+    grid-column: 2 / span 1;
+    justify-self: start;
+}
+
+.innerhx-span-type-note {
+    background-color: @light-gray;
+    font-size: small;
+    text-align: justify;
+    padding: 0.5em 1em;
+    border-radius: 0.5em;
+    position: absolute;
+    z-index: 1;
+    visibility: hidden;
+    // overflow: hidden;
+    max-width: 60%;
+}
+
+.innerhx-span-type-note-H {
+    visibility: visible;
+}
+
+div.type_paragraph { .div-type-paragraph;
+    & > span.type_note { .innertp-span-type-note; }
+    & > h2 { .innertp-hx-strong;
+        & > span.type_note { .innerhx-span-type-note; }
+        &:hover {
+            & > span.type_note { .innerhx-span-type-note-H; }
+        }
+    }
+    & > p { .innertp-p; }
+    & > div.type_paragraph { .innertp-div-type-paragraph;
+        & > span.type_note { .innerhx-span-type-note }
+        & > h3 { .innertp-hx-light;
+            & > span.type_note { .innerhx-span-type-note; }
+            &:hover {
+                & > span.type_note { .innerhx-span-type-note-H; }
+            }
+        }
+        & > p { .innertp-p; }
+        & > div.type_paragraph { .innertp-div-type-paragraph;
+            & > span.type_note { .innerhx-span-type-note; }
+            & > h4 { .innertp-hx-light;
+                & > span.type_note {
+                    .innerhx-span-type-note;
+                }
+                &:hover {
+                    & > span.type_note { .innerhx-span-type-note-H; }
+                }
+            }
+            & > p { .innertp-p; }
+        }
+    }
+}

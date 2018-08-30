@@ -1,0 +1,221 @@
+/*
+        <head>
+            <link rel="stylesheet" href="style.css" type="text/css">
+            <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Roboto" rel="stylesheet">
+        </head>
+*/
+body {
+  background-color: #f5f5ff;
+  color: #23232d;
+  font-family: "Roboto", serif;
+  font-weight: 400;
+}
+h1 {
+  font-size: x-large;
+  font-weight: bold;
+  color: #bb4840;
+  font-family: "Roboto Slab", sans-serif;
+}
+div.type_argument {
+  margin-top: -0.7em;
+  font-size: x-large;
+  color: #bb4840;
+  font-weight: bold;
+  font-family: "Roboto Slab", sans-serif;
+}
+span.type_note {
+  font-style: italic;
+  font-size: small;
+  font-family: "Roboto", serif;
+  color: #464650;
+  vertical-align: super;
+}
+table {
+  margin-top: 0.7em;
+}
+a {
+  color: #232341;
+  font-weight: bold;
+  font-family: "Roboto Slab", sans-serif;
+}
+.innertp-span-type-note {
+  grid-column: 2 / span 1;
+}
+.innertp-hx {
+  display: inline-block;
+  padding-left: 1em;
+  grid-column: 1 / span 1;
+  justify-self: start;
+}
+.innertp-hx-strong {
+  display: inline-block;
+  padding-left: 1em;
+  grid-column: 1 / span 1;
+  justify-self: start;
+  font-size: 1.5em;
+  font-weight: bold;
+  font-family: "Roboto Slab", sans-serif;
+}
+.innertp-hx-light {
+  display: inline-block;
+  padding-left: 1em;
+  grid-column: 1 / span 1;
+  justify-self: start;
+  font-size: 1em;
+  font-weight: normal;
+  font-style: italic;
+}
+.innertp-p {
+  grid-column: 2 / span 1;
+  justify-self: start;
+  align-self: center;
+}
+.div-type-paragraph {
+  display: grid;
+  grid-template-columns: 5em auto;
+}
+.innertp-div-type-paragraph {
+  display: grid;
+  grid-template-columns: 5em auto;
+  grid-column: 2 / span 1;
+  justify-self: start;
+}
+.innerhx-span-type-note {
+  background-color: #d2d2dc;
+  font-size: small;
+  text-align: justify;
+  padding: 0.5em 1em;
+  border-radius: 0.5em;
+  position: absolute;
+  z-index: 1;
+  visibility: hidden;
+  max-width: 60%;
+}
+.innerhx-span-type-note-H {
+  visibility: visible;
+}
+div.type_paragraph {
+  display: grid;
+  grid-template-columns: 5em auto;
+}
+div.type_paragraph > span.type_note {
+  grid-column: 2 / span 1;
+}
+div.type_paragraph > h2 {
+  display: inline-block;
+  padding-left: 1em;
+  grid-column: 1 / span 1;
+  justify-self: start;
+  font-size: 1.5em;
+  font-weight: bold;
+  font-family: "Roboto Slab", sans-serif;
+}
+div.type_paragraph > h2 > span.type_note {
+  background-color: #d2d2dc;
+  font-size: small;
+  text-align: justify;
+  padding: 0.5em 1em;
+  border-radius: 0.5em;
+  position: absolute;
+  z-index: 1;
+  visibility: hidden;
+  max-width: 60%;
+}
+div.type_paragraph > h2:hover > span.type_note {
+  visibility: visible;
+}
+div.type_paragraph > p {
+  grid-column: 2 / span 1;
+  justify-self: start;
+  align-self: center;
+}
+div.type_paragraph > div.type_paragraph {
+  display: grid;
+  grid-template-columns: 5em auto;
+  grid-column: 2 / span 1;
+  justify-self: start;
+}
+div.type_paragraph > div.type_paragraph > span.type_note {
+  background-color: #d2d2dc;
+  font-size: small;
+  text-align: justify;
+  padding: 0.5em 1em;
+  border-radius: 0.5em;
+  position: absolute;
+  z-index: 1;
+  visibility: hidden;
+  max-width: 60%;
+}
+div.type_paragraph > div.type_paragraph > h3 {
+  display: inline-block;
+  padding-left: 1em;
+  grid-column: 1 / span 1;
+  justify-self: start;
+  font-size: 1em;
+  font-weight: normal;
+  font-style: italic;
+}
+div.type_paragraph > div.type_paragraph > h3 > span.type_note {
+  background-color: #d2d2dc;
+  font-size: small;
+  text-align: justify;
+  padding: 0.5em 1em;
+  border-radius: 0.5em;
+  position: absolute;
+  z-index: 1;
+  visibility: hidden;
+  max-width: 60%;
+}
+div.type_paragraph > div.type_paragraph > h3:hover > span.type_note {
+  visibility: visible;
+}
+div.type_paragraph > div.type_paragraph > p {
+  grid-column: 2 / span 1;
+  justify-self: start;
+  align-self: center;
+}
+div.type_paragraph > div.type_paragraph > div.type_paragraph {
+  display: grid;
+  grid-template-columns: 5em auto;
+  grid-column: 2 / span 1;
+  justify-self: start;
+}
+div.type_paragraph > div.type_paragraph > div.type_paragraph > span.type_note {
+  background-color: #d2d2dc;
+  font-size: small;
+  text-align: justify;
+  padding: 0.5em 1em;
+  border-radius: 0.5em;
+  position: absolute;
+  z-index: 1;
+  visibility: hidden;
+  max-width: 60%;
+}
+div.type_paragraph > div.type_paragraph > div.type_paragraph > h4 {
+  display: inline-block;
+  padding-left: 1em;
+  grid-column: 1 / span 1;
+  justify-self: start;
+  font-size: 1em;
+  font-weight: normal;
+  font-style: italic;
+}
+div.type_paragraph > div.type_paragraph > div.type_paragraph > h4 > span.type_note {
+  background-color: #d2d2dc;
+  font-size: small;
+  text-align: justify;
+  padding: 0.5em 1em;
+  border-radius: 0.5em;
+  position: absolute;
+  z-index: 1;
+  visibility: hidden;
+  max-width: 60%;
+}
+div.type_paragraph > div.type_paragraph > div.type_paragraph > h4:hover > span.type_note {
+  visibility: visible;
+}
+div.type_paragraph > div.type_paragraph > div.type_paragraph > p {
+  grid-column: 2 / span 1;
+  justify-self: start;
+  align-self: center;
+}
